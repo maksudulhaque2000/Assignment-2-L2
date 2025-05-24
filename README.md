@@ -38,3 +38,41 @@ A Foreign Key is a column or a set of columns in one table that refers to the pr
 Purpose:
 - Ensures referential integrity
 - Helps maintain consistent and connected data across tables
+
+# 6.What are the LIMIT and OFFSET clauses used for?
+In PostgreSQL, the LIMIT and OFFSET clauses are used in SQL queries to control the number of rows returned and to skip a specific number of rows, respectively. These are especially useful in pagination and large dataset navigation.
+
+LIMIT Clause
+- Specifies the maximum number of rows to return.
+Syntax:
+SELECT * FROM table_name
+LIMIT number;
+
+OFFSET Clause
+- Specifies the number of rows to skip before starting to return rows.
+Syntax:
+SELECT * FROM table_name
+OFFSET number;
+
+Using LIMIT with OFFSET (Pagination)
+- This combination is often used to implement pagination in web apps.
+Syntax:
+SELECT * FROM table_name
+ORDER BY column_name
+LIMIT limit_value OFFSET offset_value;
+
+# 8.What is the significance of the JOIN operation, and how does it work in PostgreSQL?
+In PostgreSQL, the JOIN operation is used to combine rows from two or more tables based on a related column between them. It's fundamental to working with relational data, allowing you to query across multiple tables in a meaningful way.
+
+Significance of JOINs:
+- Data Integration
+- Normalization
+- Complex Queries
+- Flexibility
+
+Common JOIN Types in PostgreSQL:
+- INNER JOIN
+- LEFT JOIN
+- RIGHT JOIN
+- FULL JOIN
+- CROSS JOIN
